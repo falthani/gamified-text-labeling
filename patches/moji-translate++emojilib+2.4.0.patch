@@ -1,0 +1,19 @@
+diff --git a/node_modules/moji-translate/node_modules/emojilib/.DS_Store b/node_modules/moji-translate/node_modules/emojilib/.DS_Store
+new file mode 100644
+index 0000000..5008ddf
+Binary files /dev/null and b/node_modules/moji-translate/node_modules/emojilib/.DS_Store differ
+diff --git a/node_modules/moji-translate/node_modules/emojilib/index.js b/node_modules/moji-translate/node_modules/emojilib/index.js
+index 0d96b15..ee18503 100644
+--- a/node_modules/moji-translate/node_modules/emojilib/index.js
++++ b/node_modules/moji-translate/node_modules/emojilib/index.js
+@@ -1,5 +1,7 @@
+ module.exports = {
+-  lib: require('./emojis'),
+-  ordered: require('./ordered'),
++  lib: require('./emojis.json'),
++  ordered: require('./ordered.json'),
+   fitzpatrick_scale_modifiers: ["🏻", "🏼", "🏽", "🏾", "🏿"]
+ }
++
++// fixed path to emojis.json and ordered.json
+\ No newline at end of file

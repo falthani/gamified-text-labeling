@@ -1,0 +1,50 @@
+.doc-banner {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+h2 {
+    width: 100%;
+    padding-right: 10vw;
+}
+
+.material-symbols-outlined {
+    margin-left: 5vw;
+    color: black;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.dialog-button-container {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.doc-card {
+    justify-content: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: whitesmoke;
+}
+
+.doc-card-container {
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 2%;
+    position: relative;
+    margin-left: 25%;
+
+}

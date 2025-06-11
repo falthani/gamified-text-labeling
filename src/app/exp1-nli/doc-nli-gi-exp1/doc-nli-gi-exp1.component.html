@@ -1,0 +1,53 @@
+<mat-toolbar>
+    <div class="toolbar-spacer">
+        <div class="progress-container">
+            <mat-progress-bar mode="determinate" [value]="(labeledEntries / totalEntries) * 100"></mat-progress-bar>
+            <div class="count-label">
+                <p>{{ labeledEntries }}/{{ totalEntries }}</p>
+            </div>
+        </div>
+        <div class="done-container">
+            <button mat-raised-button color="warn" [disabled]="labeledEntries < totalEntries" (click)="onDone()">Next Task</button>
+        </div>
+    </div>
+</mat-toolbar>
+<div *ngIf="isLoading" class="loading-overlay">
+    <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="!isLoading && !allLabeled" class="doc-card" [ngStyle]="{'opacity': allLabeled ? '0' : '1'}">
+    <div class="doc-card-group">
+        <div class="title">
+            <h2>Premise</h2>
+        </div>
+        <!-- Image container that checks if there is an image URL -->
+        <div *ngIf="data[currentDataIndex].imgPath" class="image-box">
+            <img [src]="data[currentDataIndex].imgPath" alt="Generated Image">
+        </div>
+        <div class="text-button">
+            <p>{{ data[currentDataIndex].premise }}</p>
+        </div>
+    </div>
+    <div class="doc-card-group">
+
+    <div class="title">
+        <h2>Hypothesis</h2>
+    </div>
+    <div *ngIf="data[currentDataIndex].imgPath" class="image-box-spacer">
+        <img [src]="data[currentDataIndex].imgPath" alt="Generated Image" class="empty-image-box">
+    </div>
+    <div [class.disabled]="isLoading">
+        <button [disabled]="isLoading" [ngClass]="{
+            'white':!labelAttempted,
+            'blue': labelAttempted && labelCorrect && lastLabel === 'entailment',
+            'green': labelAttempted && labelCorrect && lastLabel === 'neutral',
+            'purple': labelAttempted && labelCorrect && lastLabel === 'contradiction',
+            'grey': labelAttempted && !labelCorrect
+          }" (click)="openBottomSheet()">{{ data[currentDataIndex].hypothesis }}
+        </button>
+      </div>
+    </div>
+    <!-- <button mat-raised-button (click)="openBottomSheet()">Respond</button> -->
+
+
+
+</div>

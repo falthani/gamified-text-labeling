@@ -1,0 +1,87 @@
+<div *ngIf="isLoading" class="loading-overlay">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading" class="doc-card">
+    <div class="doc-card-group">
+        <div class="title">
+            <h2>Premise</h2>
+        </div>
+        <!-- Image container that checks if there is an image URL -->
+        <div *ngIf="data[currentDataIndex].imgPath" class="image-box">
+            <img [src]="data[currentDataIndex].imgPath" alt="Generated Image">
+        </div>
+        <div class="text-box">
+            <p>{{ data[currentDataIndex].premise }}</p>
+        </div>
+    </div>
+    <div class="doc-card-group">
+        <div class="title">
+            <h2>Hypothesis</h2>
+        </div>
+        <div class="text-box">
+            <p>{{ data[currentDataIndex].hypothesis }}</p>
+        </div>
+    </div>
+
+<div *ngIf="!isLoading" class="doc-card">
+    <button mat-raised-button style="background-color: green;"   (click)="checkLabelAndNext('e')">Entailment</button>
+    <button mat-raised-button style="background-color: orange;"  (click)="checkLabelAndNext('n')">Neutral</button>
+    <button mat-raised-button color="warn" (click)="checkLabelAndNext('c')">Contradiction</button>
+</div>
+
+</div>
+
+<!-- <div class="doc-card">
+    <div class="doc-card-group">
+        <div class="title">
+            <h2>Premise</h2>
+        </div>
+        <div class="image-box">
+            <img src="/assets/imgs/img-p-2.jpeg">
+        </div>
+        <div class="text-box">
+            <p>An older and younger man smiling.            </p>
+        </div>
+    </div>
+    <div class="doc-card-group">
+        <div class="title">
+            <h2>Hypothesis</h2>
+        </div>
+        <div class="text-box">
+            <p>Two men are smiling and laughing at the cats playing on the floor.</p>
+        </div>
+    </div>
+</div>
+<div class="doc-card">
+    <button style="background-color: green;">Entailment</button>
+    <button style="background-color: orange;">Neutral</button>
+    <button style="background-color: red;">Contradiction</button>
+</div>
+<div class="doc-card">
+    <div class="doc-card-group">
+        <div class="title">
+            <h2>Premise</h2>
+        </div>
+        <div class="image-box">
+            <img src="/assets/imgs/img-p-3.jpeg">
+        </div>
+        <div class="text-box">
+            <p>A soccer game with multiple males playing.</p>
+        </div>
+    </div>
+    <div class="doc-card-group">
+        <div class="title">
+            <h2>Hypothesis</h2>
+        </div>
+        <div class="text-box">
+            <p>Some men are playing a sport.</p>
+        </div>
+    </div>
+</div>
+<div class="doc-card">
+    <button style="background-color: green;">Entailment</button>
+    <button style="background-color: orange;">Neutral</button>
+    <button style="background-color: red;">Contradiction</button>
+</div>
+ -->

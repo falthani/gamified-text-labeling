@@ -1,0 +1,14 @@
+<div class="blank-container"><div class="emoji-wrapper"><div class="emoji">{{ test[lastIndex].translated }}</div></div>
+<app-doc-blank [guesses]="guesses" [blank]="blank"></app-doc-blank></div>
+
+<!-- <button mat-raised-button color="primary" (click)="dummyClick()">Click me!</button> -->
+<!-- <app-doc-keyboard [blank]="blank"></app-doc-keyboard> -->
+<div style="text-align:center">
+	<div class="simple-keyboard"></div>
+</div>
+<app-doc-mistake-count [guesses]="guesses" [blank]="blank"></app-doc-mistake-count>
+<div class="doc-dialog-container">
+    <button mat-raised-button color="warn">Cancel</button>
+    <button mat-raised-button color="primary">Done</button>
+
+</div>

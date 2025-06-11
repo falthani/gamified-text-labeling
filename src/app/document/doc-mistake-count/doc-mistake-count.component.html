@@ -1,0 +1,35 @@
+<div class="emoji-mistake-wrapper">
+<div class="emoji-faces" id="face-success" *ngIf="success">
+    😀
+</div>
+<div class="emoji-faces" *ngIf="!success">
+
+    <div id="face-1" *ngIf="mistakesRemaining == 7">
+        🙂
+    </div>
+    <div id="face-2" *ngIf="mistakesRemaining == 6">
+        😐
+    </div>
+    <div id="face-3" *ngIf="mistakesRemaining == 5">
+        😕
+    </div>
+    <div id="face-4" *ngIf="mistakesRemaining == 4">
+        😟
+    </div>
+    <div id="face-5" *ngIf="mistakesRemaining == 3">
+        😥
+    </div>
+    <div id="face-6" *ngIf="mistakesRemaining == 2">
+        😱
+    </div>
+    <div id="face-7" *ngIf="mistakesRemaining == 1">
+        😵
+    </div>
+    <div class="face-8" *ngIf="mistakesRemaining == 0">
+        💀
+    </div>
+</div>
+
+<div class="mistake-count">
+    Mistakes Remaining : {{mistakesRemaining}}
+</div></div>

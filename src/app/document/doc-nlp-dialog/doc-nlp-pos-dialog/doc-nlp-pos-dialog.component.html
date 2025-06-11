@@ -1,0 +1,15 @@
+<!-- <button class="help-button" mat-mini-fab>?</button> -->
+<div class="dialog-header">
+    <h3>Select the correct part of speech tag for <b>" {{posTagItems[lastIndex].word}} " </b>:</h3></div>
+<div class="image-box" *ngIf="this.posTagItems[lastIndex].img !== undefined">
+    <img [src]="posTagItems[lastIndex].img">
+</div>
+<div class="doc-dialog-container">
+    <div class="button-wrapper">
+        <button mat-raised-button class="blue" (click)="pronounBtn()">Pronoun</button>
+        <button mat-raised-button class="green" (click)="nounBtn()">Noun</button>
+
+        <button mat-raised-button class="purple" (click)="properNounBtn()">Proper Noun</button>
+    </div>
+   
+</div> 

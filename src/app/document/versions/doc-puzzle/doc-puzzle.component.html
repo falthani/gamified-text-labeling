@@ -1,0 +1,34 @@
+<!-- <div class="doc-card-container">
+    <mat-card appearance="outlined" class="doc-card">
+
+        <button id="translated-text" class="translated-text" *ngFor="let finalText of finalText; let i = index"
+            (click)="openBottomSheet(finalText.id)" [disabled]="finalText.isDisabled" [ngClass]="finalText.button"
+            value="{{i}}">
+            {{ finalText.translated }}
+        </button>
+    </mat-card>
+</div> -->
+
+<h2 class="title">{{ title$ | async }}</h2>
+
+<div class="doc-card-container">
+    <mat-card appearance="outlined" class="doc-card">
+        <ng-container *ngIf="finalText && finalText.length > 0">
+            <button id="nlp-text" class="text-button" *ngFor="let finalText of pagedfinalTexts; let i = index"
+                (click)="openBottomSheet(finalText.id)" [disabled]="finalText.isDisabled" [ngClass]="finalText.button"
+                value="{{i}}">
+                {{ finalText.translated }}
+            </button>
+
+        </ng-container>
+
+        <ng-container *ngIf="!(finalText && finalText.length > 0)">
+            <p>No finalText found.</p>
+        </ng-container>
+    </mat-card>
+    <div class="doc-paginator">
+        <mat-paginator [length]="finalText.length" [pageSize]="pageSize" (page)="onPageChange($event)"
+            [disablePageSize]="true" hidePageSize aria-label="Select page">
+        </mat-paginator>
+    </div>
+</div>

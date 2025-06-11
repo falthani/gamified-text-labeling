@@ -1,0 +1,34 @@
+[  
+  {  
+    "id": 0,  
+    "title": "The Library",  
+    "text": "Sammy was seven years old. He loved to read, so his mother took him to the library. She told him to choose some books. While Sammy was looking at the books, his mother looked at the CDs. She loved to listen to music. Sammy chose ten books and the library said he could borrow them for one month. His mother chose three CDs but she could only borrow them for seven days. Sammy's books were free but his mother had to pay $2 for each CD. When they got home Sammy read his books and his mother listened to her music."
+  },
+
+  {  
+    "id": 1,  
+    "title": "The New House",  
+    "text": "Mrs Smith was an old lady who lived by herself. She had a nice house and a nice garden but it was too big.  I don t need a big house,  she said to her friends.  And I don t need a big garden. I m too old to work in the garden. I want to move house. Her friends said they would help her to look for a new, small house. They looked for many weeks. At last they found her a nice, small house close to the shops and the bus. Now Mrs Smith lives by herself. She lives in a small house, with a small garden and she is very happy."
+  },
+
+  {  
+    "id": 2,  
+    "title": "No Food",  
+    "text": "Sammy looked out the window and saw his cousins coming to visit. Oh, no! He hadn t been to the supermarket for days. He didn t think he had any food in the house. Quickly Sammy looked in the cupboard. He found some rice. Good start! He looked in the fridge. He found some frozen peas. Ok! He looked in the back of the cupboard by the sink. He found a tin of tomatoes. Fine! Sammy put the rice on to cook. He turned on the TV for his cousins.  Sammy, we re hungry!   Sammy smiled at his young cousins. Today we are having stop and go rice! Red tomato rice to stop and green pea rice to go!  His cousins laughed and looked very happy."
+  },
+
+  {  
+    "id": 3,  
+    "title": "Tetris",  
+    "text": "Tetris (Russian: Тетрис)[b] is a puzzle video game created by the Soviet software engineer Alexey Pajitnov in 1984. It has been published by several companies for multiple platforms, most prominently during a dispute over the appropriation of the rights in the late 1980s. After a significant period of publication by Nintendo, the rights reverted to Pajitnov in 1996, who co-founded the Tetris Company with Henk Rogers to manage licensing."
+  },
+
+  {  
+    "id": 4,
+    "category": "Bio",  
+    "title": "Daniel Bernoulli ",
+    "summary": "Daniel Bernoulli was an 18th Century Swiss mathematician who taught as a professor in St. Petersburg and Basel, known for his book Hydrodynamica and the invention of a now obsolete method to measure blood pressure using glass tubes to puncture arteries.",  
+    "text": "Daniel Bernoulli was a Swiss mathematician and physicist. He is remembered for his work in fluid mechanics, probability and statistics. He was born in Groningen, Netherlands, into a family of distinguished mathematicians. He studied medicine at Basel, Heidelberg and Strasbourg, and earned a PhD in anatomy and botany in 1721. He went to St. Petersburg in 1724 as a professor of mathematics, but left in 1733 due to illness. He returned to the University of Basel and held the chairs of medicine, metaphysics, and natural philosophy until his death in 1782."
+    
+  }
+]  

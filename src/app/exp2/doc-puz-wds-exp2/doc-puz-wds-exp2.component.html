@@ -1,0 +1,65 @@
+<mat-toolbar>
+    <div class="toolbar-spacer">
+      <div class="progress-container">
+        <mat-progress-bar
+          mode="determinate"
+          [value]="(labeledEntries / totalEntries) * 100"
+        ></mat-progress-bar>
+      </div>
+      <!-- Group count labels and button together for alignment -->
+      <div class="done-section">
+        <div class="count-label-container">
+            <div class="count-label">
+              <p><b>{{ labeledEntries }}&nbsp;/&nbsp;{{ totalEntries }}</b>&nbsp;&nbsp;complete</p>
+            </div>
+            <div class="count-label">
+              <p><b>{{ wordDisplayService.getTotalPoints() }}</b>&nbsp;&nbsp;points</p>
+            </div>
+          </div>
+          
+        <div class="done-container">
+          <button
+            mat-raised-button
+            color="warn"
+            [disabled]="labeledEntries < totalEntries || isLoading"
+            (click)="onDone()"
+          >
+            Next Task
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar>
+  
+<div *ngIf="isLoading" class="loading-overlay">
+    <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="!isLoading && !allLabeled" class="doc-card" [ngStyle]="{'opacity': allLabeled ? '0' : '1'}">
+
+    <div class="doc-card-group">
+
+
+        <div class="sentence-container">
+            <div *ngFor="let word of splitSentenceIntoWords(data[currentDataIndex].sentence, data[currentDataIndex].word)">
+                <ng-container *ngIf="word === data[currentDataIndex].word; else highlightedText">
+                    <button [disabled]="isLoading"
+                            class="text-button inline-button"
+                            [ngClass]="{
+                                'white': !labelAttempted,
+                                'grey': labelAttempted && !labelCorrect
+                            }"
+                            [class]="labelAttempted && labelCorrect ? lastColor : ''"
+                            (click)="openBottomSheet()">
+                      {{ revealedWord || "?" }}  <!-- Display revealed word if available, otherwise emoji -->
+                    </button>
+                  </ng-container>
+                  
+              <ng-template #highlightedText>
+                <span class="highlighted-text is-highlighted">{{ word }}</span>
+              </ng-template>
+            </div>
+          </div>   
+    </div>
+
+
+</div>

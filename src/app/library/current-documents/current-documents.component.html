@@ -1,0 +1,41 @@
+<div class="exp-container">
+    <mat-accordion ngModel name="document" ngDefaultControl>
+        <mat-expansion-panel class="current-exp-panel" *ngFor="let document of documents$ | async"
+            [ngClass]="{'hide': document.purchased === false, 'show': document.purchased === true}">
+            <mat-expansion-panel-header>
+                <mat-panel-title class="doc-title">
+                    {{ document.title }}
+                </mat-panel-title>
+                <mat-panel-description>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="summary-container">
+                {{ document.summary }}
+            </div>
+            <div class="version-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Version</mat-label>
+                    <mat-select [(value)]="selected">
+                        <!-- <mat-option value="/doc-nlp-pos/{{document.customIdName}}">Just
+                            Text</mat-option> -->
+                        <!-- <mat-option value="/doc-img/{{document.customIdName}}">Images</mat-option>
+                        <mat-option value="/doc-puzzle/{{document.customIdName}}">Word Puzzle</mat-option>
+                        <mat-option value="/doc-puzzle-img/{{document.customIdName}}">Emoji Puzzle</mat-option>
+                        <mat-option value="/doc-text-img-gen/{{document.customIdName}}">AI Generated Images</mat-option>
+                        <mat-option value="/img-gen/{{document.customIdName}}">AI Image Generator</mat-option> -->
+                        <!-- <mat-option value="/ai-img-new/{{document.customIdName}}">AI Images (new!)</mat-option> -->
+                        <mat-option value="/text-exp1/{{document.customIdName}}">text</mat-option>
+                        <mat-option value="/ai-img-exp1/{{document.customIdName}}">no style</mat-option>
+                        <mat-option value="/gr-img-exp1/{{document.customIdName}}">relevant</mat-option>
+                        <mat-option value="/gi-img-exp1/{{document.customIdName}}">irrelevant</mat-option>
+
+
+                    </mat-select>
+                </mat-form-field>
+                <a routerLink={{selected}}><button class="play-btn" mat-stroked-button color="primary"
+                        [disabled]="selected == undefined">Play</button></a>
+            </div>
+        </mat-expansion-panel>
+
+    </mat-accordion>
+</div>

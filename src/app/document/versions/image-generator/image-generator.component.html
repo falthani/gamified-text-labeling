@@ -1,0 +1,15 @@
+<mat-card appearance="outlined" class="doc-card">
+<app-doc-nlp-pos></app-doc-nlp-pos>
+<div class="container">
+    <form (submit)="generateImage()">
+        <label>
+            Text prompt:
+            <input type="text" [(ngModel)]="inputText" [ngModelOptions]="{standalone: true}"           >
+        </label>
+        <button mat-raised-button type="submit" [disabled]="isLoading" color="primary">Generate image</button>
+    </form>
+    <div class="image-box" *ngIf="imageUrl">
+        <img [src]="sanitizeImageUrl(imageUrl)" >
+    </div>
+</div>
+</mat-card>

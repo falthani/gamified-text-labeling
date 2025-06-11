@@ -1,0 +1,37 @@
+<head>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<div class="doc-banner"><a routerLink="/"><button mat-button class="material-symbols-outlined">arrow_back</button></a>
+  <h2>Catalogue</h2>
+</div>
+<div class="chip-container">
+  <mat-chip-listbox aria-label="Genre selection" selected="{{selected.valueOf}}">
+    <mat-chip-option selected>All</mat-chip-option>
+    <mat-chip-option>Academic 
+      <!-- <mat-icon *ngIf="">school</mat-icon> -->
+    </mat-chip-option>
+    <mat-chip-option>Travel 
+      <!-- <mat-icon>public</mat-icon> -->
+    </mat-chip-option>
+    <mat-chip-option>Bio 
+      <!-- <mat-icon>person</mat-icon> -->
+    </mat-chip-option>
+    <mat-chip-option>News 
+      <!-- <mat-icon>newspaper</mat-icon> -->
+    </mat-chip-option>
+  </mat-chip-listbox>
+</div>
+<app-featured></app-featured>
+<!-- <mat-grid-list cols="4" rowHeight="100px" [gutterSize]="'10px'">
+  <mat-grid-tile [colspan]=4 [rowspan]=2>
+    <a routerLink="/featured"><button mat-button color="primary">Featured</button></a>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]=3 [rowspan]=2>
+    <a routerLink="/genre"><button mat-button color="warn">By Genre</button></a>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]=1 [rowspan]=2>
+    <a routerLink="/a-z"><button mat-button color="warn">A - Z</button></a>
+  </mat-grid-tile>
+</mat-grid-list> -->

@@ -1,0 +1,27 @@
+<div *ngIf="!gameOver">
+    <h3> {{ hangmanState.display }}</h3>
+    <div #keyboard class="simple-keyboard"></div>
+    <p>Attempts left: {{ hangmanState.attemptsLeft }}</p>
+  </div>
+  
+  <div *ngIf="gameOver">
+
+
+    <div class="dialog-header">
+        Select the correct part of speech tag for "{{sharedPosTagItems[lastIndex].word}}" :</div>
+    <div class="doc-dialog-container">
+        <div class="prev-fab"><button mat-mini-fab color="fab-color" matTooltip="Previous word" aria-label="Previous word"
+                (click)="onBackClick()"><mat-icon>keyboard_arrow_left</mat-icon></button></div>
+    
+        <div class="button-wrapper">
+            <button mat-raised-button class="blue" (click)="pronounBtn()">Pronoun</button>
+            <button mat-raised-button class="green" (click)="nounBtn()">Noun</button>
+    
+            <button mat-raised-button class="purple" (click)="properNounBtn()">Proper Noun</button>
+    
+        </div>
+        <div class="next-fab"><button mat-mini-fab color="fab-color" matTooltip="Next word" aria-label="Next word"
+                (click)="onNextClick()"><mat-icon>keyboard_arrow_right</mat-icon></button></div>
+    
+    </div>
+</div>

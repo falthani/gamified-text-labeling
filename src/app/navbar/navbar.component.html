@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<div class="nav">
+  <button mat-button [matMenuTriggerFor]="menu" class="material-symbols-outlined">menu</button>
+  <mat-menu #menu="matMenu">
+    <a routerLink="/"><button mat-menu-item> <mat-icon [ngStyle]="{'color':'grey'}">dashboard</mat-icon>
+        Home</button></a>
+    <a routerLink="/library"><button mat-menu-item> <mat-icon [ngStyle]="{'color':'grey'}">book</mat-icon>
+        My Library</button></a>
+    <a routerLink="/catalogue"><button mat-menu-item> <mat-icon [ngStyle]="{'color':'grey'}">menu_book</mat-icon>
+        Catalogue</button></a>
+    <button mat-menu-item><mat-icon [ngStyle]="{'color':'grey'}">contact_support</mat-icon>About</button>
+  </mat-menu>
+  <app-overall-progress-bar></app-overall-progress-bar>
+
+  <div class="user">
+    <div class="score-container">
+      <app-total-score></app-total-score>
+    </div>
+    <button mat-button [matMenuTriggerFor]="user">Guest<mat-icon [ngStyle]="{'color':'grey'}">account_circle</mat-icon>
+    </button>
+
+    <mat-menu #user="matMenu">
+      <a *ngIf="!isAuth" routerLink="/signup"><button mat-menu-item color="primary">Sign up</button></a>
+      <a *ngIf="!isAuth" routerLink="/login"><button mat-menu-item color="primary">Login</button></a>
+      <a *ngIf="isAuth" routerLink="/" (click)="onLogout()"><button mat-menu-item color="primary">Logout</button></a>
+    </mat-menu>
+  </div>
+</div>

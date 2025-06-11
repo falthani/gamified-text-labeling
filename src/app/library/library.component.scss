@@ -1,0 +1,43 @@
+.doc-banner {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+h2 {
+    width: 100%;
+    padding-right: 10vw;
+}
+
+.material-symbols-outlined {
+    margin-left: 5vw;
+    color: black;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.mat-mdc-card {
+    justify-content: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: whitesmoke;
+}
+
+a {
+    margin-right: 2%;
+}
+
+.mat-tab {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid, whitesmoke;
+}

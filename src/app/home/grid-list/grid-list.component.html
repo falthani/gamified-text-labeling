@@ -1,0 +1,17 @@
+<mat-grid-list cols="4" rowHeight="100px" [gutterSize]="'10px'">
+  <mat-grid-tile [colspan]=2 [rowspan]=1>
+    <!-- <a [routerLink]="combinedRoute[randomIndex]"> -->
+      <button mat-button color="primary"><b>Play</b>
+      </button>
+    <!-- </a> -->
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]=2 [rowspan]=2>
+    <app-stats></app-stats>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]=2 [rowspan]=2>
+    <a routerLink="/library"><button mat-button [ngStyle]="{'color':'black'}" >My Library</button></a>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]=2 [rowspan]=1>
+    <a routerLink="/catalogue"><button mat-button [ngStyle]="{'color':'black'}">Catalogue</button></a>
+  </mat-grid-tile>
+</mat-grid-list>

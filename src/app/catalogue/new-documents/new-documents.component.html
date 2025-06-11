@@ -1,0 +1,19 @@
+<mat-card appearance="outlined" class="new-doc-card" *ngFor="let document of documents$ | async"
+    [ngClass]="{'hide': document.purchased === true, 'show': document.purchased === false}">
+    <mat-card-title class="mat-card-title">{{ document.title }} <mat-chip>
+            <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+                alt="Photo of a Shiba Inu" />
+            {{ document.category }}
+        </mat-chip>
+    </mat-card-title>
+    <mat-card-content class="new-doc-content">
+        <p>{{ document.summary }}</p>
+    </mat-card-content>
+    <mat-card-actions class="btn-container">
+        <button class="add-btn" mat-raised-button color="primary" (click)="onAddDocument(document)"><span class="material-symbols-outlined">
+            add
+            </span>
+            </button>
+    </mat-card-actions>
+
+</mat-card>

@@ -1,0 +1,52 @@
+<!-- <button class="help-button" mat-mini-fab>?</button> -->
+<!-- <div class="image-box" *ngIf="this.sharedPosTagItems[lastIndex].img !== undefined">
+    <img [src]="sharedPosTagItems[lastIndex].img">
+</div> -->
+<div class="dialog-header">
+    Select the correct part of speech tag for "{{sharedPosTagItems[lastIndex].word}}" :</div>
+<div class="doc-dialog-container">
+    <div class="prev-fab"><button mat-mini-fab color="fab-color" matTooltip="Previous word" aria-label="Previous word"
+            (click)="onBackClick()"><mat-icon>keyboard_arrow_left</mat-icon></button></div>
+
+    <div class="button-wrapper">
+        <button mat-raised-button class="blue" (click)="pronounBtn()">Pronoun</button>
+        <button mat-raised-button class="green" (click)="nounBtn()">Noun</button>
+
+        <button mat-raised-button class="purple" (click)="properNounBtn()">Proper Noun</button>
+
+    </div>
+    <div class="next-fab"><button mat-mini-fab color="fab-color" matTooltip="Next word" aria-label="Next word"
+            (click)="onNextClick()"><mat-icon>keyboard_arrow_right</mat-icon></button></div>
+
+</div>
+
+<!-- Optional Help Button -->
+<!-- <button class="help-button" mat-mini-fab>?</button> -->
+
+<!-- Display Image if Available -->
+<!-- <div *ngIf="sharedPosTagItems$ | async as sharedPosTagItems">
+ <div class="image-box" *ngIf="this.sharedPosTagItem[lastIndex].img !== undefined">
+    <img [src]="sharedPosTagItem[lastIndex].img">
+</div> -->
+<!-- Dialog Header -->
+<!-- <div class="dialog-header">
+        <h3>Select the correct part of speech tag for 
+            <b>"{{ sharedPosTagItem[lastIndex].word }}"</b>:
+        </h3>
+    </div> -->
+
+<!-- Dialog Content -->
+<!-- <div class="doc-dialog-container">
+        <button (click)="onNextClick()">Back</button> -->
+
+<!-- Buttons for Tag Selection -->
+<!-- <div class="button-wrapper">
+            <button mat-raised-button class="blue" (click)="pronounBtn()">Pronoun</button>
+            <button mat-raised-button class="green" (click)="nounBtn()">Noun</button>
+            <button mat-raised-button class="purple" (click)="properNounBtn()">Proper Noun</button>
+        </div> -->
+
+<!-- Next Button -->
+<!-- <button (click)="onNextClick()">Next</button>
+    </div>
+</div> -->

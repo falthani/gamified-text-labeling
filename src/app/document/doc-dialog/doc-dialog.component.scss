@@ -1,0 +1,70 @@
+.mat-mdc-raised-button {
+    margin: 10px;
+}
+
+.emoji {
+    font-size: 3.0em;
+    left: 0px;
+    padding: 10px;
+}
+
+.emoji-wrapper {
+    display: flex;
+    justify-content: left;
+    padding-top: 5%;
+    padding-right: 10%;
+    margin: 1%;
+}
+
+.blank-container {
+    display: flex;
+    width: 100%;
+    margin-top: 2%;
+    border-radius: 2%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+}
+
+
+.doc-dialog-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+ul {
+    text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    height: 10px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  .simple-keyboard {
+    // margin-top: 2%;
+    max-width: 850px;
+  }
+
+  input {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  .simple-keyboard.hg-layout-default .hg-button.hg-grey {
+    background: lightgrey;
+    color: white;
+    pointer-events: none;
+  }

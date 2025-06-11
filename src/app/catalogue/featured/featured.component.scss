@@ -1,0 +1,66 @@
+.doc-banner {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+h2 {
+    width: 100%;
+    padding-right: 10vw;
+}
+
+.material-symbols-outlined {
+    margin-left: 5vw;
+    color: black;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.featured-container {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.mat-mdc-card {
+    justify-content: center;
+    background: white;
+    width: 30%;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: whitesmoke;
+}
+
+.mat-expansion-panel {
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: whitesmoke;
+}
+
+h5 {
+    margin: 0;
+    padding-top: 5%;
+}
+
+.mat-mdc-outlined-button {
+    top: 3vh;
+}
+
+.mat-mdc-raised-button {
+    float: right;
+}

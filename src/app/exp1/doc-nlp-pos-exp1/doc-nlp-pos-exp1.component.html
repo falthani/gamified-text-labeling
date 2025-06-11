@@ -1,0 +1,53 @@
+<mat-toolbar>
+    <div class="toolbar-spacer">
+    <div class="title-container">
+    <span class="title">{{ title$ | async }}</span>
+</div>
+    <!-- <span class="toolbar-spacer"></span> -->
+    <div class="progress-container">
+        <mat-progress-bar mode="determinate" [value]="this.progress"></mat-progress-bar>
+        <div class="count-label">
+            {{this.nounPronPropnCount}} / 30
+        </div>
+    </div>
+
+    <div class="done-container">
+
+    <div class="done-btn">
+        <button mat-raised-button [disabled]="!doneButtonVisible" color="warn" (click)="onDone()">Next Task</button>
+    </div>
+    </div>
+    </div>
+</mat-toolbar>
+<div class="doc-card-container" [class.add-space]="!isHighlightedItemWithImage() || !(imageUrl$ | async)">
+    <mat-card appearance="outlined" class="doc-card">
+        <!-- Image box moved here, outside of *ngFor -->
+        <div *ngIf="isHighlightedItemWithImage()">
+            <div class="image-box" *ngIf="imageUrl$ | async as imageUrl">
+                <img [src]="imageUrl" *ngIf="imageValid[imageUrl]" alt="image for word">
+            </div>
+        </div>
+        
+
+        <ng-container *ngIf="pagedPosTagItems && pagedPosTagItems.length > 0">
+            <div *ngFor="let posTagItem of pagedPosTagItems">
+                <div>
+                    <button id="pos-tag-item-{{ posTagItem.id }}" class="text-button"
+                        (click)="openBottomSheet(posTagItem.id)" [disabled]="posTagItem.isDisabled"
+                        [class]="posTagItem.color">
+                        {{ posTagItem.word }}
+                    </button>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="!(pagedPosTagItems && pagedPosTagItems.length > 0)">
+            <p>Loading...</p>
+        </ng-container>
+    </mat-card>
+    <div class="doc-paginator">
+        <mat-paginator [length]="posTagItems.length" [pageSize]="pageSize" (page)="onPageChange($event)"
+            [disablePageSize]="true" hidePageSize aria-label="Select page" [pageIndex]="pageIndex">
+        </mat-paginator>
+    </div>
+</div>

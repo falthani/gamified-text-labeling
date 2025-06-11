@@ -1,0 +1,33 @@
+#container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.child {
+    // height: 80px;
+    // height: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    width: 20rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: whitesmoke;
+    padding: 30px;
+    padding-left: 5%;
+}
+
+button {
+    margin-top: 10%;
+    margin-bottom: 2%;
+}

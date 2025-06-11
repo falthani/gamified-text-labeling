@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ng-text-label-app"
+  },
+  "targets": {
+    "ng-text-label-app": {
+      "hosting": {
+        "my-app": [
+          "ng-text-label-app"
+        ]
+      }
+    }
+  }
+}

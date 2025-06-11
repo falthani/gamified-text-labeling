@@ -1,0 +1,117 @@
+.doc-card {
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertical centering */
+    height: 100%; /* Full height of the parent */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: whitesmoke;
+    padding: 10%;
+    top: 50%;
+    // padding-right: 10%;
+    // padding-left: 10%;
+    // padding-bottom: 10%;
+  }
+  
+  @media (max-width: 979px) {
+    .doc-card {
+      margin-top: 15% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  .doc-card-container {
+    justify-content: space-evenly;
+    align-items: center;
+    // width: 50%;
+    margin-top: 2%;
+    // position: relative;
+    // position: absolute;
+    // top: 50%;
+    // transform: translate(0, -50%);
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  @media (max-width: 979px) {
+    .doc-card-container {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+  
+  .doc-card-container.add-space {
+    margin-top: 25vh; /* Adjust the space as needed */
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    // z-index: 1050; /* Higher than the overlay's z-index */
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: whitesmoke;
+  }
+  
+  .doc-card-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space between image and text */
+    margin-bottom: 20px; /* Optional: space between each image-text pair */
+    width: 50%;
+    // border: 1px solid #000;
+}
+
+.image-box, .text-box {
+    flex: 1; /* Each takes up equal space */
+}
+
+.image-box img {
+    width: 100%; /* Make the image responsive within its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-box {
+    padding-right: 20px; /* Optional: space between image and text */
+    padding-top: 20px; /* Optional: space between image and text */
+    padding-left: 20px; /* Optional: space between image and text */
+    padding-bottom: 20px; /* Optional: space between image and text */
+    // border: 1px solid #000;
+}
+
+.text-box {
+    padding-top: 20px; /* Optional: space between image and text */
+    padding-left: 20px; /* Optional: space between image and text */
+
+}
+
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 0.8rem;
+    width: 8vw;
+    font-weight: normal;
+    // padding-right: 10%;
+    // padding-left: 10%;
+  }
+  
+  @media (max-width: 979px) {
+    button {
+      width: 18vw !important;
+    }
+}

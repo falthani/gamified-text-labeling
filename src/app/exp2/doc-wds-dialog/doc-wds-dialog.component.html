@@ -1,0 +1,12 @@
+<div class="dialog-header">
+    <h3><b>Which definition best matches the word as used in this sentence?</b></h3>
+  </div>
+  <div class="bottom-sheet">
+    <button *ngFor="let definition of shuffledDefinitions" 
+            mat-raised-button 
+            [ngClass]="definition.color" 
+            (click)="selectLabel(definition.definition, definition.color)">
+      {{ definition.definition }}
+    </button>
+  </div>
+  

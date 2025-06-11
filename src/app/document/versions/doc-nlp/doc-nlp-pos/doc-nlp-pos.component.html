@@ -1,0 +1,32 @@
+<h2 class="title">{{ title$ | async }}</h2>
+<div class="doc-card-container">
+    <mat-card appearance="outlined" class="doc-card">
+        <ng-container *ngIf="pagedPosTagItems && pagedPosTagItems.length > 0">
+            <div *ngFor="let posTagItem of pagedPosTagItems">
+                <button id="nlp-text" class="text-button" (click)="openBottomSheet(posTagItem.id)"
+                [disabled]="posTagItem.isDisabled" [class]="posTagItem.color"
+                [matBadge]="posTagItem.img ? '★' : ''" matBadgeColor="primary" matBadgeSize="small">
+                {{ posTagItem.word }}
+            </button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="!(posTagItems && posTagItems.length > 0)">
+            <p>Loading...</p>
+        </ng-container>
+    </mat-card>
+    <div class="doc-paginator">
+        <mat-paginator [length]="posTagItems.length" [pageSize]="pageSize" (page)="onPageChange($event)"
+            [disablePageSize]="true" hidePageSize aria-label="Select page">
+        </mat-paginator>
+    </div>
+        <div class="done-btn">
+            <button mat-raised-button [disabled]="!doneButtonVisible" color="primary" (click)="onDone()">Done</button>
+
+        </div>
+        <div class="count-label">
+            {{this.nounPronPropnCount}}
+        </div>
+
+
+</div>
