@@ -1,6 +1,6 @@
 # Gamified Text Labeling Tasks Interface
 
-> **Conference paper**: *How Task Complexity Moderates the Impact of AI‑Generated Images on User Experience in Gamified Text Labeling* (Althani et al., 2025). This repository contains the gamified text labelling tasks interface used in the experiments described in the paper.
+> **Paper**: *How Task Complexity Moderates the Impact of AI‑Generated Images on User Experience in Gamified Text Labeling* (Althani et al., 2025). This repository contains the gamified text labelling tasks interface used in the experiments described in the paper.
 
 ---
 
