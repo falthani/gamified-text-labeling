@@ -1,6 +1,6 @@
-# Gamified Text Labeling Tasks Interface
+# Gamified Text Labelling Tasks Interface
 
-> **Paper**: *How Task Complexity Moderates the Impact of AI‑Generated Images on User Experience in Gamified Text Labeling* (Althani et al., 2025). This repository contains the gamified text labelling tasks interface used in the experiments described in the paper.
+> **Paper**: *How Task Complexity Moderates the Impact of AI‑Generated Images on User Experience in Gamified Text Labelling* (Althani et al., 2025). This repository contains the gamified text labelling tasks interface used in the experiments described in the paper.
 
 ---
 
@@ -25,7 +25,7 @@ src/
 1. **Clone and install**
 
    ```bash
-   git clone https://github.com/falthani/gamified-text-labeling.git
+   git clone https://github.com/falthani/gamified-text-labelling.git
    cd gamified-text-labeling
    npm install
    ```
